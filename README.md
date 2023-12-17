@@ -6,22 +6,22 @@
 ## Установка
 1. Склонировать проект
 2. Установить [Python 3.11.6](https://www.python.org/downloads/release/python-3116/)
-3. Установить "Разработка классических приложений на C++" с помощью [Visual Studio Installer](https://visualstudio.microsoft.com/ru/visual-cpp-build-tools/) для DuckDB
-4. Установить библиотеки из "requirements.txt" '''pip install -r requirements.txt'''
+3. Установить ***Разработка классических приложений на C++*** с помощью [Visual Studio Installer](https://visualstudio.microsoft.com/ru/visual-cpp-build-tools/) (для DuckDB)
+4. Установить библиотеки из ***requirements.txt*** `pip install -r requirements.txt`
 5. Установить [PostgreSQL 16.1](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
 ## Запуск
-1. Скопировать в папку "data" csv-файл с данными
+1. Скопировать в папку ***data*** csv-файл с данными
 2. Изменить файл под нужный формат для работы с ними. Если данные взяты [отсюда](https://drive.google.com/drive/folders/1usY-4CxLIz_8izBB9uAbg-JQEKSkPMg6):
- - Скомпилировать файл "data/fix.cpp" (подойдет почти любой компилятор для C++)
- - Запустить программу, передав в нее в качестве аргумента название csv-файла (без расширения)
-3. Изменить файл "config.json":
- - "dataset": название csv-файла (без расширения)
- - "libraries": библиотеки для бенчмарка (можно указывать только те, что записаны изначально)
- - "queries": запросы для бенчмарка (1, 2, 3, 4)
- - "postgres": параметры для входа в PostgreSQL
- - "tests": количество тестов
-4. Запустить файл "main.py"
+   - Скомпилировать файл ***fix.cpp*** (подойдет почти любой компилятор для C++)
+   - Запустить программу, передав в нее в качестве аргумента название csv-файла (без расширения)
+3. Изменить файл ***config.json***:
+   - ***dataset***: название csv-файла (без расширения)
+   - ***libraries***: библиотеки для бенчмарка (можно указывать только те, что записаны изначально)
+   - ***queries***: запросы для бенчмарка (1, 2, 3, 4)
+   - ***postgres***: параметры для входа в базу данных PostgreSQL
+   - ***tests***: количество тестов
+4. Запустить файл ***main.py***
 
 ## Выводы
 По результатам бенчмарка:

@@ -152,6 +152,7 @@ cython_debug/
 .idea/
 
 # Data
+.data/
 *.csv
 *.db
 *.pkl
