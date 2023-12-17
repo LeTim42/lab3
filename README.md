@@ -1,13 +1,13 @@
 # Бенчмарк "4 queries"
-[О бенчмарке](https://medium.unum.cloud/pandas-cudf-modin-arrow-spark-and-a-billion-taxirides-f85973bfafd5)
-[Сырые данные](https://github.com/toddwschneider/nyc-taxi-data)
-Использованные библиотеки: Psycopg2, SQLite, DuckDB, Pandas, SQLAlchemy
+- [О бенчмарке](https://medium.unum.cloud/pandas-cudf-modin-arrow-spark-and-a-billion-taxirides-f85973bfafd5)
+- [Сырые данные](https://github.com/toddwschneider/nyc-taxi-data)
+- Использованные библиотеки: Psycopg2, SQLite, DuckDB, Pandas, SQLAlchemy
 
 ## Установка
 1. Склонировать проект
 2. Установить [Python 3.11.6](https://www.python.org/downloads/release/python-3116/)
 3. Установить ***Разработка классических приложений на C++*** с помощью [Visual Studio Installer](https://visualstudio.microsoft.com/ru/visual-cpp-build-tools/) (для DuckDB)
-4. Установить библиотеки из ***requirements.txt*** `pip install -r requirements.txt`
+4. Установить библиотеки из ***requirements.txt*** с помощью `pip install -r requirements.txt`
 5. Установить [PostgreSQL 16.1](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
 ## Запуск
@@ -24,8 +24,9 @@
 4. Запустить файл ***main.py***
 
 ## Выводы
-По результатам бенчмарка:
+По результатам бенчмарка на csv-файле размером 2 ГБ:
 - Быстрее всех работает DuckDB: написана на C++, обрабатывает данные параллельно
 - На втором месте Pandas: использует векторизацию, менее оптимизирована под SQL
 - Psycopg2 и SQLAlchemy работают примерно одинаковое время: схожая реализация, оба загружают данные из PostgreSQL
 - Медленнее всех работает SQLite: легкая библиотека, нет оптимизаций
+Результаты и графики в ***results.xlsx***
