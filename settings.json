@@ -1,0 +1,24 @@
+{
+  "dataset": "nyc_yellow_big",
+  "libraries": [
+    "psycopg2",
+    "sqlite3",
+    "duckdb",
+    "pandas",
+    "sqlalchemy"
+  ],
+  "queries": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "postgres": {
+      "dbname": "postgres",
+      "user": "postgres",
+      "password": "postgres",
+      "host": "localhost",
+      "port": "5432"
+  },
+  "tests": 1
+}
