@@ -6,10 +6,12 @@ from time import time
 def go(settings):
     pd.options.mode.chained_assignment = None
     dataset = settings['dataset']
-    if not exists(f"{dataset}.pkl"):
+    if not exists(f"data/{dataset}.pkl"):
         data = pd.read_csv(f"data/{dataset}.csv")
-        data.to_pickle(f"{dataset}.pkl")
-    data = pd.read_pickle(f"{dataset}.pkl")
+        data['pickup_datetime'] = pd.to_datetime(data['pickup_datetime'])
+        data['dropoff_datetime'] = pd.to_datetime(data['dropoff_datetime'])
+        data.to_pickle(f"data/{dataset}.pkl")
+    data = pd.read_pickle(f"data/{dataset}.pkl")
 
     tests = int(settings['tests'])
     queries = settings['queries']

@@ -20,5 +20,5 @@
       "host": "localhost",
       "port": "5432"
   },
-  "tests": 1
+  "tests": 16
 }

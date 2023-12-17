@@ -4,7 +4,7 @@ from csv import reader
 
 
 def go(settings):
-    conn = connect('sqlite.db')
+    conn = connect('data/sqlite.db')
     cur = conn.cursor()
     dataset = settings['dataset']
 

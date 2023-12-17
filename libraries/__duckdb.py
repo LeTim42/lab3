@@ -3,7 +3,7 @@ from time import time
 
 
 def go(settings):
-    conn = connect('duckdb.db')
+    conn = connect('data/duckdb.db')
     dataset = settings['dataset']
     conn.sql(f"CREATE TABLE IF NOT EXISTS {dataset} AS SELECT * FROM read_csv('data/{dataset}.csv', AUTO_DETECT=TRUE);")
 
